@@ -11,7 +11,7 @@ from collections import defaultdict
 
 GAIN = 100.0
 BINNING = 0
-F_NUMBER = 5.60
+F_NUMBER = 7
 TEMPERATURE = -10
 
 DARKS = 30
@@ -34,6 +34,22 @@ FILTERS = {
     "S": {
         "id": 29471,
         "name": "ToupTek SII 4nm 36 mm"
+    },
+    "L": {
+        "id": 25576,
+        "name": "ToupTek Lum 36 mm"
+    },
+    "R": {
+        "id": 28943,
+        "name": "ToupTek R 36 mm"
+    },
+    "G": {
+        "id": 28944,
+        "name": "ToupTek G 36 mm"
+    },
+    "B": {
+        "id": 28945,
+        "name": "ToupTek B 36 mm"
     }
 }
 
@@ -58,7 +74,7 @@ print(f"Root directory: {ROOT_DIRECTORY}")
 pattern = re.compile(
     r"(?P<date>\d{4}-\d{2}-\d{2})_"
     r"\d{2}-\d{2}-\d{2}_"
-    r"(?P<filter>[HOS])_"
+    r"(?P<filter>[HOSLRGB])_"
     r"(?P<temp>-?\d+\.\d+)_"
     r"(?P<duration>\d+\.\d+)s",
     re.IGNORECASE
